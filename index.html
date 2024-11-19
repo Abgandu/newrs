@@ -39,12 +39,15 @@
             padding: 40px;
             border-right: 1px solid #e0e0e0;
             background-color: #f9fafa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .left-section img {
-            width: 100px;
+            width: 150px;
             height: auto;
-            display: block;
             margin-bottom: 20px;
         }
 
@@ -53,54 +56,23 @@
             font-weight: bold;
             margin-bottom: 20px;
             color: #2c3e50;
+            text-align: center;
         }
 
         .left-section p {
             font-size: 16px;
             line-height: 1.6;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .left-section a {
-            display: inline-block;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: all 0.3s ease;
             text-align: center;
-        }
-
-        .button-primary {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .button-primary:hover {
-            background-color: #0056b3;
-        }
-
-        .button-secondary {
-            background-color: #f1f1f1;
-            color: #333;
-            border: 1px solid #ccc;
-        }
-
-        .button-secondary:hover {
-            background-color: #e0e0e0;
+            color: #555;
         }
 
         /* Right Section Styling */
         .right-section {
             width: 50%;
             padding: 40px;
-            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .right-section h2 {
@@ -136,7 +108,6 @@
         .right-section p {
             font-size: 16px;
             line-height: 1.6;
-            margin-top: 20px;
             color: #555;
         }
 
@@ -144,35 +115,76 @@
             font-weight: bold;
             color: #333;
         }
+
+        /* Buttons Section */
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            width: 45%;
+            transition: all 0.3s ease;
+        }
+
+        .button-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .button-secondary {
+            background-color: #f1f1f1;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .button-secondary:hover {
+            background-color: #e0e0e0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Left Section -->
         <div class="left-section">
-            <img src="adserror.png" alt="Logo">
+            <img src="adserror.png" alt="Lock Icon">
             <h2>Facebook account is restricted from advertising</h2>
             <p>Your account and its assets can’t be used to advertise because it didn’t comply with Advertising Policies. Learn more about this restriction on Account Quality.</p>
-            <div class="buttons">
-                <a href="#" class="button-primary">Go to Account Quality</a>
-                <a href="#" class="button-secondary">Cancel</a>
-            </div>
         </div>
 
         <!-- Right Section -->
         <div class="right-section">
-            <h2>We restricted your business</h2>
-            <p><strong>What this means:</strong></p>
-            <ul>
-                <li>You can't create or run ads</li>
-                <li>You can't use or share audiences</li>
-                <li>You can't use Meta Pixel</li>
-                <li>You can't use app SDKs to send app events</li>
-                <li>You can't boost posts</li>
-                <li>You can't manage advertising assets or people for business</li>
-            </ul>
-            <p><strong>Why this happened:</strong></p>
-            <p>It looks like this account was created or used with automation that doesn’t follow our rules. This goes against our Advertising Standards on Account Integrity.</p>
+            <div>
+                <h2>We restricted your business</h2>
+                <p><strong>What this means:</strong></p>
+                <ul>
+                    <li>You can't create or run ads</li>
+                    <li>You can't use or share audiences</li>
+                    <li>You can't use Meta Pixel</li>
+                    <li>You can't use app SDKs to send app events</li>
+                    <li>You can't boost posts</li>
+                    <li>You can't manage advertising assets or people for business</li>
+                </ul>
+                <p><strong>Why this happened:</strong></p>
+                <p>It looks like this account was created or used with automation that doesn’t follow our rules. This goes against our Advertising Standards on Account Integrity.</p>
+            </div>
+            <!-- Buttons -->
+            <div class="buttons">
+                <a href="#" class="button-secondary">Cancel</a>
+                <a href="#" class="button-primary">Request a review</a>
+            </div>
         </div>
     </div>
 </body>
